@@ -59,7 +59,7 @@ internal class Renderer: ObservableObject {
   @MainActor @Published var rendered: Bool = false
   
   /// Whether or not the receiver is currently rendering.
-  @MainActor @Published var isRendering: Bool = false
+  @MainActor var isRendering: Bool = false
   
   /// The rendered blocks.
   @MainActor @Published var blocks: [ComponentBlock] = []
