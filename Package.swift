@@ -5,7 +5,6 @@ import PackageDescription
 
 let package = Package(
   name: "LaTeXSwiftUI",
-  version: "1.4.0", // Đặt phiên bản ở đây
   platforms: [
     .iOS(.v15),
     .macOS(.v12)
