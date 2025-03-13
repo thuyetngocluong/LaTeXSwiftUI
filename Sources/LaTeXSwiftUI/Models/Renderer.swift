@@ -56,13 +56,13 @@ internal class Renderer: ObservableObject {
   // MARK: Public properties
   
   /// Whether or not the view's blocks have been rendered.
-  @MainActor @Published var rendered: Bool = false
+  @MainActor var rendered: Bool = false
   
   /// Whether or not the receiver is currently rendering.
   @MainActor var isRendering: Bool = false
   
   /// The rendered blocks.
-  @MainActor @Published var blocks: [ComponentBlock] = []
+  @MainActor var blocks: [ComponentBlock] = []
   
   // MARK: Private properties
   
