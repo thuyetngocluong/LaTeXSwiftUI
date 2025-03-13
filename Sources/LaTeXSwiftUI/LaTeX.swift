@@ -173,6 +173,8 @@ public struct LaTeX: View {
   
   /// The view's preload task, if any.
   @State private var preloadTask: Task<(), Never>?
+    
+    @State private var isRendered: Bool = false
   
   // MARK: Initializers
   
@@ -187,7 +189,7 @@ public struct LaTeX: View {
   
   public var body: some View {
     VStack(spacing: 0) {
-      if renderer.rendered {
+      if renderer.rendered || isRendered {
         // If our blocks have been rendered, display them
         bodyWithBlocks(renderer.blocks)
       }
@@ -269,6 +271,8 @@ extension LaTeX {
       font: font ?? .body,
       displayScale: displayScale,
       renderingMode: imageRenderingMode)
+      
+      isRendered = true
   }
   
   /// Renders the view's components synchronously.
